@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { GoogleAnalytics } from "@next/third-parties/google";
+import Clarity from "@/components/analytics/Clarity";
 
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
@@ -29,7 +30,9 @@ export default function RootLayout({
         
         <Footer />
 
+        
         <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID!} />
+        <Clarity />
       </body>
     </html>
   );
