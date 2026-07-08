@@ -1,5 +1,9 @@
-import Image from "next/image";
+"use client";
+
+import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
+import { Menu, X } from "lucide-react";
 
 const links = [
   { href: "/", label: "Inicio" },
@@ -12,38 +16,64 @@ const links = [
 ];
 
 export default function Navbar() {
+  const [open, setOpen] = useState(false);
+
   return (
-    <header className="sticky top-0 z-50 border-b border-gray-200 bg-white/90 backdrop-blur-md">
+    <header className="sticky top-0 z-50 border-b border-gray-200 bg-white/95 backdrop-blur">
       <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6">
 
         {/* Logo */}
-        <Link
-          href="/"
-          className="flex items-center gap-3 transition-opacity hover:opacity-90"
-        >
+        <Link href="/" className="flex items-center">
           <Image
             src="/logo.png"
             alt="PortalCan"
-            width={48}
-            height={48}
+            width={58}
+            height={58}
             priority
+            className="h-14 w-auto"
           />
         </Link>
 
-        {/* Navegación */}
-        <nav className="hidden md:flex items-center gap-8">
+        {/* Menú escritorio */}
+        <nav className="hidden lg:flex items-center gap-8">
           {links.map((link) => (
             <Link
               key={link.href}
               href={link.href}
-              className="relative text-sm font-medium text-gray-700 transition-colors duration-200 hover:text-sky-600"
+              className="font-medium text-gray-700 transition-colors duration-200 hover:text-[#C8A34A]"
             >
               {link.label}
             </Link>
           ))}
         </nav>
 
+        {/* Botón móvil */}
+        <button
+          onClick={() => setOpen(!open)}
+          className="lg:hidden rounded-lg p-2 text-gray-700 hover:bg-gray-100 transition"
+          aria-label="Abrir menú"
+        >
+          {open ? <X size={28} /> : <Menu size={28} />}
+        </button>
       </div>
+
+      {/* Menú móvil */}
+      {open && (
+        <nav className="lg:hidden border-t border-gray-200 bg-white">
+          <div className="flex flex-col py-3">
+            {links.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                onClick={() => setOpen(false)}
+                className="px-6 py-4 text-gray-700 transition-colors hover:bg-gray-50 hover:text-[#C8A34A]"
+              >
+                {link.label}
+              </Link>
+            ))}
+          </div>
+        </nav>
+      )}
     </header>
   );
 }
