@@ -23,7 +23,7 @@ export default function Navbar() {
         >
           <Image
             src="/logo.png"
-            alt="EliteCan"
+            alt="PortalCan"
             width={48}
             height={48}
             priority

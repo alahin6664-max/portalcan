@@ -10,7 +10,7 @@ export default function Footer() {
           {/* Marca */}
           <div>
             <h2 className="text-2xl font-bold text-sky-700">
-              EliteCan
+              PortalCan
             </h2>
 
             <p className="mt-4 text-gray-600">
@@ -93,7 +93,7 @@ export default function Footer() {
         </div>
 
         <div className="mt-12 border-t pt-6 text-center text-sm text-gray-500">
-          © {new Date().getFullYear()} EliteCan. Todos los derechos reservados.
+          © {new Date().getFullYear()} PortalCan. Todos los derechos reservados.
         </div>
 
       </div>

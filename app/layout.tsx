@@ -5,10 +5,10 @@ import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://elitecan.es"),
+  metadataBase: new URL("https://portalcan.com"),
   title: {
-    default: "EliteCan",
-    template: "%s | EliteCan",
+    default: "PortalCan",
+    template: "%s | PortalCan",
   },
   description:
     "Comparativas, guías y herramientas para ayudarte a cuidar mejor de tu perro.",

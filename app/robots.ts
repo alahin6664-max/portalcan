@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://elitecan.es/sitemap.xml",
+    sitemap: "https://portalcan.com/sitemap.xml",
   };
 }

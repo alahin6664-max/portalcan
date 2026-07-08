@@ -148,7 +148,7 @@ export default function Home() {
 
       </section>
 
-      {/* POR QUÉ ELITECAN */}
+      {/* POR QUÉ PORTALCAN */}
 
       <section className="bg-gray-50 py-24">
 
@@ -157,7 +157,7 @@ export default function Home() {
           <div className="text-center">
 
             <h2 className="text-4xl font-bold">
-              ¿Por qué confiar en EliteCan?
+              ¿Por qué confiar en PortalCan?
             </h2>
 
             <p className="mt-4 text-gray-600">
