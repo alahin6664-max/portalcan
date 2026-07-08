@@ -19,7 +19,7 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-gray-200 bg-white/95 backdrop-blur">
+    <header className="sticky top-0 z-50 border-b border-[#2d2d2d] bg-[#111111] shadow-lg">
       <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6">
 
         {/* Logo */}
@@ -27,10 +27,9 @@ export default function Navbar() {
           <Image
             src="/logo.png"
             alt="PortalCan"
-            width={58}
-            height={58}
+            width={120}
+            height={120}
             priority
-            className="h-14 w-auto"
           />
         </Link>
 
@@ -40,7 +39,7 @@ export default function Navbar() {
             <Link
               key={link.href}
               href={link.href}
-              className="font-medium text-gray-700 transition-colors duration-200 hover:text-[#C8A34A]"
+              className="font-medium text-gray-300 transition-colors duration-200 hover:text-[#C8A34A]"
             >
               {link.label}
             </Link>
@@ -50,7 +49,7 @@ export default function Navbar() {
         {/* Botón móvil */}
         <button
           onClick={() => setOpen(!open)}
-          className="lg:hidden rounded-lg p-2 text-gray-700 hover:bg-gray-100 transition"
+          className="lg:hidden rounded-lg p-2 text-gray-300 hover:bg-gray-600 transition"
           aria-label="Abrir menú"
         >
           {open ? <X size={28} /> : <Menu size={28} />}
@@ -59,14 +58,14 @@ export default function Navbar() {
 
       {/* Menú móvil */}
       {open && (
-        <nav className="lg:hidden border-t border-gray-200 bg-white">
+        <nav className="lg:hidden border-t border-[#2d2d2d] bg-[#111111]">
           <div className="flex flex-col py-3">
             {links.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
                 onClick={() => setOpen(false)}
-                className="px-6 py-4 text-gray-700 transition-colors hover:bg-gray-50 hover:text-[#C8A34A]"
+                className="px-6 py-4 text-gray-300 transition-colors hover:bg-gray-600 hover:text-[#C8A34A]"
               >
                 {link.label}
               </Link>
