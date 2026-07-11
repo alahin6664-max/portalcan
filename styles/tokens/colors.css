@@ -1,0 +1,40 @@
+@theme {
+  /* ==========================
+     Brand
+  ========================== */
+
+  --color-primary: #d4af37;
+  --color-primary-600: #c19b2f;
+
+  /* ==========================
+     Backgrounds
+  ========================== */
+
+  --color-background: #121212;
+  --color-surface: #1b1b1b;
+  --color-card: #1f1f1f;
+
+  /* ==========================
+     Text
+  ========================== */
+
+  --color-text: #ffffff;
+  --color-text-secondary: #b3b3b3;
+
+  /* ==========================
+     Borders
+  ========================== */
+
+  --color-border: #2e2e2e;
+  --color-divider: #333333;
+  --color-ring: #d4af37;
+
+  /* ==========================
+     Status
+  ========================== */
+
+  --color-success: #22c55e;
+  --color-warning: #f59e0b;
+  --color-error: #ef4444;
+
+}

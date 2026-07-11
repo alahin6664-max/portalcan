@@ -1,0 +1,12 @@
+@theme {
+  /* Durations */
+  --duration-fast: 150ms;
+  --duration-normal: 250ms;
+  --duration-slow: 400ms;
+
+  /* Easings */
+  --ease-default: ease;
+  --ease-in: ease-in;
+  --ease-out: ease-out;
+  --ease-in-out: ease-in-out;
+}

@@ -2,9 +2,20 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import Script from "next/script";
+import { Inter, Montserrat } from "next/font/google";
 
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
+
+const inter = Inter({
+  variable: "--font-body",
+  subsets: ["latin"],
+});
+
+const montserrat = Montserrat({
+  variable: "--font-heading",
+  subsets: ["latin"],
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://portalcan.com"),
@@ -23,7 +34,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es">
-      <body className="bg-gray-50 text-gray-900">
+      <body className={`${inter.variable} ${montserrat.variable} antialiased`}>
         <Navbar />
 
         {children}
