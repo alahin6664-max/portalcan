@@ -35,12 +35,8 @@ export default function RootLayout({
   return (
     <html lang="es">
       <body className={`${inter.variable} ${montserrat.variable} antialiased`}>
-        <Navbar />
 
         {children}
-        
-        <Footer />
-
         
         <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID!} />
         <Script
