@@ -4,9 +4,6 @@ import { GoogleAnalytics } from "@next/third-parties/google";
 import Script from "next/script";
 import { Inter, Montserrat } from "next/font/google";
 
-import Navbar from "@/components/layout/Navbar";
-import Footer from "@/components/layout/Footer";
-
 const inter = Inter({
   variable: "--font-body",
   subsets: ["latin"],
