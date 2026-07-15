@@ -1,4 +1,1 @@
-import { HTMLAttributes } from "react";
-
-export interface DividerProps
-  extends HTMLAttributes<HTMLHRElement> {}
+export type DividerProps = React.HTMLAttributes<HTMLHRElement>;
