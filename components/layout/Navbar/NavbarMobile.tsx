@@ -1,4 +1,4 @@
-import { Button } from "@/components/ui";
+import { Button } from "@/components/ui/Button";
 import { NavbarLink } from "./NavbarLink";
 import { NavbarLink as NavbarLinkType } from "./Navbar.types";
 import { styles } from "./Navbar.styles";

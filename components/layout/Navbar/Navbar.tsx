@@ -4,7 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
 
-import { Button } from "@/components/ui";
+import { Button } from "@/components/ui/Button";
 
 import { styles } from "./Navbar.styles";
 import { NavbarProps } from "./Navbar.types";
